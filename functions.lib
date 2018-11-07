@@ -1,3 +1,8 @@
+# Prints directory path where script is being run from in format like: /home/user/name
+function DIRECTORY {
+        dirname $0
+           }
+
 function HOSTNAME {
         hostname
            }
@@ -5,6 +10,7 @@ function HOSTNAME {
 function LANIP {
         hostname -I
            }
+
 function WANIP {
            host myip.opendns.com resolver1.opendns.com | grep "myip.opendns.com has" | awk '{print $4}'
            }
